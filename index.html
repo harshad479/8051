@@ -9,6 +9,7 @@
     <link
         href=http://vlabs.iitb.ac.in/vlabs-dev/labs/8051-Microcontroller-Lab/src/simulator8051/static/css/app.5115836dfa9fa9d8438148c1ad6037af.css
         rel=stylesheet>
+        <link href=sim.css rel=stylesheet>
 
     <!-- favicon start -->
     
@@ -38,77 +39,68 @@
 
     <!-- favicon end -->
 
-    <style>
-        body ::-webkit-scrollbar {
-            -webkit-appearance: none;
-            width: 5px;
-        }
-
-
-        #editor {
-            position: relative !important;
-            height: 330px !important;
-        }
-
-        .title {
-            margin: 20px auto 20px auto;
-        }
-
-        .header {
-            text-align: center;
-        }
-
-        .labels {
-            margin: auto;
-            width: fit-content;
-            /* border: 3px solid #73AD21; */
-            /* padding: 10px; */
-        }
-
-        .mymodal {
-            margin: 20px 10px 20px 10px;
-        }
-
-        #content {
-            font-size: 16px;
-        }
-
-        /* #mybutton {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-        } */
-    </style>
 </head>
 
 <body>
     <!-- <button id="mybutton" onclick="myFunction()">Desktop Mode</button> -->
-
+    
     <div id=app></div>
+
+    <!-- Trigger/Open The Modal -->
+    <!-- <button id="myBtn">Open Modal</button> -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="mymodal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="text-editor">
+                <textarea id="comment" placeholder="Type ..." spellcheck="false"></textarea>
+            </div>
+        </div>
+
+    </div>
+
     <script type=text/javascript
         src=http://vlabs.iitb.ac.in/vlabs-dev/labs/8051-Microcontroller-Lab/src/simulator8051/static/js/manifest.dadf31c7dd5d8f89a3a9.js></script>
     <script type=text/javascript
         src=http://vlabs.iitb.ac.in/vlabs-dev/labs/8051-Microcontroller-Lab/src/simulator8051/static/js/vendor.78a6a2487e11e431ac55.js></script>
-    <script type="text/javascript" src="sim.js"></script>
+    <script type="text/javascript" src="sim.js?version=57"></script>
     <script>
-        document.getElementById("content").innerHTML += ("<div class='mymodal'><p>The source code of this website is copied from <a href='http://vlabs.iitb.ac.in/vlabs-dev/labs/8051-Microcontroller-Lab/labs/index.php'> 8051 Microcontroller and Applications Lab</a> of IITB and <strong>modified</strong> for android devices under the <a href='http://www.gnu.org/licenses/quick-guide-gplv3.html'>GPLv3 (General Public License version 3)</a> license.</p>   <p>If you have any problems or questions related to any matter, you may directly contact me at <a href='mailto:salviharshad12@gmail.com'>salviharshad12@gmail.com</a>.</p></div>");
 
-        // function myFunction() {
-        //     // document.getElementsByTagName("META")[1].content = "width=device-width, initial-scale=0";
-        //     var state = document.getElementsByTagName("META")[1]
-        //     if (state.content === "width=device-width, initial-scale=1.0") {
-        //         state.content = "width=device-width, initial-scale=0"
-        //         document.getElementById("mybutton").innerText="Mobile Mode"
-        //     } else if (state.content === "width=device-width, initial-scale=0") {
-        //         state.content = "width=device-width, initial-scale=1.0"
-        //         document.getElementById("mybutton").innerText="Desktop Mode"
-        //     };
-        // }
+        // modal js start
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    // modal js end
+
+    document.getElementById("content").innerHTML += ("<div class='disc-modal'><p>The source code of this website is copied from <a href='http://vlabs.iitb.ac.in/vlabs-dev/labs/8051-Microcontroller-Lab/labs/index.php'> 8051 Microcontroller and Applications Lab</a> of IITB and <strong>modified</strong> for android devices under the <a href='http://www.gnu.org/licenses/quick-guide-gplv3.html'>GPLv3 (General Public License version 3)</a> license.</p>   <p>If you have any problems or questions related to any matter, you may directly contact me at <a href='mailto:salviharshad12@gmail.com'>salviharshad12@gmail.com</a>.</p></div>");
+
     </script>
 </body>
 
