@@ -107,14 +107,14 @@ webpackJsonp([1], {
 			}, [r("button", {
 				staticClass: "my-btn",
 				attrs: {
-					id: "myBt"
+					id: "myBtn1"
 				}
 			}, [t._v("Number System Converter")]), t._v(" "),  t._v(" "), r("button", {
 				staticClass: "my-btn",
 				attrs: {
 					id: "myBtn"
 				}
-			}, [t._v("Text Editor")]),  ]),
+			}, [t._v("Notepad")]),  ]),
 			// buttons for my extra functinality End
 
 			r("div", {
