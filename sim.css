@@ -80,11 +80,11 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    /* .my-btn:first-child{
-        width: auto;
-    } */
+    .my-btn:first-child{
+        width: 70%;
+    }
     .my-btn{
-        width: auto;
+        width: 27%;
     }
   }
 
@@ -145,6 +145,97 @@ body {
   
       /* ================================MODAL CSS End===============================*/
 
+      /* number converter css start*/
+
+      .center {
+        text-align: center;
+      }
+  
+      #main {
+        /* width: 100%; */
+        /* height: 100%; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top:15%;
+      }
+  
+      #parent {
+        /*border: 2px solid red;*/
+        width: 690px;
+      }
+  
+      #other {
+        /*border: 2px solid black;*/
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 0px 0px 0px;
+        flex-direction: column;
+      }
+  
+      input {
+        font-size: 15px;
+        padding: 7px 15px;
+        /* border: 1px solid grey; */
+        /* border-radius: 22px; */
+        /* neumorphism */
+        /* margin-bottom: 30px; */
+        border-radius: 25px;
+        box-shadow: inset 8px 8px 8px #cbced1,
+          inset -8px -8px 8px #ffffff;
+      }
+  
+      .center input {
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 18px;
+        color: #555;
+        /* padding: 20px 10px 20px 5px; */
+      }
+  
+      input#dec {
+        /*width: 100%;*/
+        box-sizing: border-box;
+      }
+  
+      button {
+        padding: 5px 15px;
+        background-color: #6181FF;
+        color: white;
+        border: 1px solid transparent;
+        font-size: 13px;
+        font-family: sans-serif;
+        border-radius: 18px;
+        outline: none;
+      }
+  
+      .btn {
+        margin: 13px;
+      }
+  
+      button:hover {
+        background-color: #5275FF;
+        cursor: pointer;
+      }
+  
+      button:active {
+        transform: scale(0.9, 0.9);
+      }
+  
+      input:focus {
+        outline: none;
+      }
+  
+      h1 {
+        text-align: center;
+        font-family: sans-serif;
+        color: white;
+        text-shadow: 1px 0px 0px black, 0px -1px 0px black, 0px 1px 0px black, -1px 0px 0px black;
+      }
+
+      /* number converter css end*/
+
 
       /* Text-Editor css start */
 
@@ -158,7 +249,8 @@ body {
       textarea {
         -webkit-tap-highlight-color: transparent;
         width: 100%;
-        min-height: 8rem;
+        min-height: 30vh;
+        /* max-height: 100%; */
         padding: 1rem 1.5rem;
         font-size: 18px;
         line-height: 1.3rem;
@@ -170,7 +262,7 @@ body {
         box-shadow: 
           18px 18px 30px #D1D9E9, 
           -18px -18px 30px #FFFFFF;
-        resize: vertical;
+        resize: none; /*vertical*/
         transition: ease .2s;
         cursor: pointer;
       }
@@ -180,7 +272,8 @@ body {
       }
       
       textarea:focus {
-        min-height: 12rem;
+        /* height:80vh; */
+        min-height: 50vh;
         box-shadow: 
           inset 18px 18px 30px #D1D9E9, 
           inset -18px -18px 30px #FFFFFF;
@@ -188,19 +281,19 @@ body {
       
       /* Chrome/Opera/Safari */
       ::-webkit-input-placeholder { 
-        color: transparent;
+        color: black;
       }
       /* Firefox 19+ */
       ::-moz-placeholder { 
-        color: transparent;
+        color: black;
       }
       /* IE 10+ */
       :-ms-input-placeholder { 
-        color: transparent;
+        color: black;
       }
       /* Firefox 18- */
       :-moz-placeholder { 
-        color: transparent;
+        color: black;
       }
       
       textarea:placeholder-shown {
